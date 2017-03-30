@@ -123,14 +123,14 @@ yOld = y;
 hspeed = (keyboard_check(vk_right) - keyboard_check(vk_left)) * 4;
 vspeed = (keyboard_check(vk_down) - keyboard_check(vk_up)) * 4;
 //If you are moving, then image speed = 0.5, otherwise it is 0
-image_speed = (hspeed != 0 || vspeed != 0) / 2;
+image_speed = (hspeed != 0 || vspeed != 0) * 0.5;
 //If you are moving...
-if(image_speed) {
+if(image_speed != 0) {
     //... set scaling to face right or left
     image_xscale = sign(hspeed + 1);
     if(hspeed != 0) {
         //If moving horizontally then use the side sprite
-        sprite_index = sprites[2]
+        sprite_index = sprites[2];
     } else {
         //Otherwise face up or down
         sprite_index = sprites[vspeed &gt;= 0];

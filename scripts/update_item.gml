@@ -13,7 +13,7 @@ field       = argument1;
 replacement = argument2;
 
 if(is_string(index)) {
-    index = ds_grid_value_x(itemDB, 0, ItemName, ds_grid_width(itemDB) - 1, ItemName, index);
+    index = item_get_index(index);
 }
 if(field >= 0 && field <= 1 && is_string(replacement)) {
     ds_grid_set(itemDB, index, field, replacement);

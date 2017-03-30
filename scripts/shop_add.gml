@@ -7,7 +7,7 @@ grid. Returns true on success, false if the item does not exist.
 
 item = argument0;
 if(is_string(item)) {
-    item = ds_grid_value_x(itemDB, 0, ItemName, ds_grid_width(itemDB) - 1, ItemName, item);
+    item = item_get_index(item);
 }
 
 if(item < ds_grid_width(itemDB)) {

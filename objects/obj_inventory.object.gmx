@@ -272,7 +272,7 @@ selectedItem = min(selectedItem, lastFilledSlot - 1);
             <string>var removeItem, item;
 removeItem = false;
 //Figure out what item is being used
-if(inv_read(selectedItem, ItemIndex)) {
+if(inv_read(selectedItem, ItemQty) != 0) {
     item = itemdb_read(inv_read(selectedItem, ItemIndex), ItemName);
     if(is_string(item)) {
         //Then find it's action and do it

@@ -12,7 +12,7 @@ var item, amt;
 item = argument0;
 if(is_string(item)) {
     //Get the index if the item given is a string
-    item = ds_grid_value_x(itemDB, 0, ItemName, ds_grid_width(itemDB) - 1, ItemName, item);
+    item = item_get_index(index);
 }
 amt = argument1;
 
